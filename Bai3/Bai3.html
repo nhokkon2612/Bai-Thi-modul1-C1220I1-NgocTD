@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Fibonaci number</title>
+</head>
+<body>
+            <script>
+                let numF1=0;
+                let numF2=1;
+                let flag=false;
+                let numF = 0;
+                let a = +prompt("Input numb to check");
+                function checkFibonaci() {
+                    if (a < 0) {
+                        alert(a+ " is not a fibonaci")
+                    } else if (a == 0) {
+                        alert(a+ " is a Fibonaci number")
+                    } else {
+
+                        while (numF<100000){
+                            numF=numF1+numF2;
+                            numF1=numF2;
+                            numF2=numF;
+                            if(a==numF){
+                               flag=true;
+                            }else{
+                                flag=false;
+
+                        }
+                            break;
+                            if(flag=true){
+                                alert(a+ " is a fibonaci");
+                            }else{
+                                alert(a+ "is not a fibonaci")
+                            }
+                    }
+
+
+                    }
+                }
+                checkFibonaci();
+            </script>
+</body>
+</html>
+
+

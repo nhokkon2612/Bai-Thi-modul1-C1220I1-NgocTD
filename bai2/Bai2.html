@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+
+</body>
+            <script>
+              let b = +prompt("input number to check");
+              let numArr=[];
+              let newArr=[];
+              let a= +prompt("Length off array");
+
+              for (let i = 0; i < a; i++) {
+                  numArr[i]= +prompt("Input to complete numArr ");
+              }
+              function tryRemoveFromArray() {
+
+                  for (let i = 0; i < a; i++) {
+                      if (numArr[i] != b) {
+
+                          newArr.push(numArr[i]);
+
+                      }
+                      }
+
+                  alert( "numArr now : "+newArr);
+                  }
+              tryRemoveFromArray();
+
+
+
+
+            </script>
+</html>

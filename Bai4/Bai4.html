@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+</body>
+<script>
+    class Cirle {
+        constructor(x, y, radius, color) {
+            this.pos_x = x;
+            this.pos_y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+        render(canvas){
+            let ctx = canvas.getContext("2d")
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.pos_x, this.pos_y, this.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    }
+    let cirle = new Cirle(10, 10, 100, "#000000");
+    let canvas = document.getElementById("myCanvas");
+    cirle.render(canvas);
+</script>
+</html>
